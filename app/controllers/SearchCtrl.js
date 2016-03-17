@@ -24,8 +24,12 @@ MovieApp.controller("SearchCtrl",
         $scope.omdbResultArr.forEach(function(currItem,idx) {
           $http.get("http://www.omdbapi.com/?i=" + currItem.imdbID)
           .then(function(response) {
-            $scope.omdbResultArr[idx].Poster = response.Poster;
-            $scope.omdbResultArr[idx].Actors = response.Actors;
+            $scope.omdbResultArr[idx].Actors = response.data.Actors;
+            if (response.data.Poster.indexOf("http") >= 0) {  // valid URL for poster?
+              $scope.omdbResultArr[idx].Poster = response.data.Poster;
+            } else {
+              $scope.omdbResultArr[idx].Poster = "http://warnerwirelessusa.com/wp-content/uploads/2015/03/image-not-available-master.jpg";
+            }
           }); // end then
         });  //end forEach
         $http.get(`${firebaseURL}/movies/.json`)
