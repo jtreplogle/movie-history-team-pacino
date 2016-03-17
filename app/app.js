@@ -35,16 +35,8 @@ MovieApp.config(["$routeProvider",
         templateUrl: "partials/login.html",
         controller: "LoginCtrl"
       }).
-      when("/logout", {
-        templateUrl: "partials/login.html",
-        controller: "LoginCtrl"
-      }).
-      when("/search", {
-        templateUrl: "partials/search.html",
-        controller: "SearchCtrl"
-      }).
       otherwise({
-        redirectTo: "/login"
+        redirectTo: "/list"
       });
   }]);
 

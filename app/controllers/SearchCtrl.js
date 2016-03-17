@@ -10,15 +10,16 @@ MovieApp.controller("SearchCtrl",
 
   function ($scope, $location, $http, firebaseURL) {
 
-    $scope.search = "";
     $scope.omdbResultArr = [];
     $scope.firebaseResultArr = [];
+    $scope.search = "";
 
     $scope.searchMovie = function() {
-
-      $http.get("http://www.omdbapi.com/?t=" + $scope.search + "&y=&plot=short&r=json&page=1")
+      console.log("search", $scope.search);
+      $http.get("http://www.omdbapi.com/?s=" + $scope.search)
       .then(function(response){ 
         $scope.omdbResultArr = response.data;
+        console.log("data", response.data);
         $http({
           url: firebaseURL + "/movies/.json",
           method: "GET"
