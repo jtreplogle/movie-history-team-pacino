@@ -17,6 +17,7 @@ let isAuth = (authFactory) => new Promise((resolve, reject) => {
     resolve();
   } else {
     console.log("User is not authenticated, reject route promise");
+    Materialize.toast('You must Log in first.', 4000)
     reject();
   }
 });
@@ -29,14 +30,15 @@ MovieApp.config(["$routeProvider",
     $routeProvider.
       when("/list", {
         templateUrl: "partials/my-movies-list.html",
-        controller: "MyMoviesCtrl"
+        controller: "MyMoviesCtrl",
+        resolve: { isAuth }
       }).
       when("/login", {
         templateUrl: "partials/login.html",
         controller: "LoginCtrl"
       }).
       otherwise({
-        redirectTo: "/list"
+        redirectTo: "/login"
       });
   }]);
 

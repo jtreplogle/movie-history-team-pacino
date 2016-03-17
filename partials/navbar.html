@@ -1,11 +1,10 @@
 <div class="row"  ng-controller="SearchCtrl">
   <div class="col l11">
-    <input ng-model="search" placeholder="Search Movie Database:" type="text"  ng-keyup="$event.which === 13 && searchMovie()" >
+    <input ng-model="search" placeholder="Search Movie Database:" type="text"  ng-if="isAuthenticated()" ng-keyup="$event.which === 13 && searchMovie()" >
   </div>
   <div>
-    <ul class="right">
+    <ul class="center">
       <li><a href="#/" ng-if="isAuthenticated()" ng-click="logout()">Logout</a></li>
-      <li><a href="#/login" ng-if="!isAuthenticated()">Login</a></li>
     </ul>
   </div>
 </div>

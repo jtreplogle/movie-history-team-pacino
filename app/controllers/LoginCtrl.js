@@ -43,7 +43,7 @@ MovieApp.controller("LoginCtrl",
       authFactory
         .authenticate($scope.account)
         .then(() => {
-          $location.path("/");
+          $location.path("/list");
           $scope.$apply();  // Needed for $location.path() to succeed
         });
 

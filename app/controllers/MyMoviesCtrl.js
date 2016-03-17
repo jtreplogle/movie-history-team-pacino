@@ -11,6 +11,9 @@ MovieApp.controller("MyMoviesCtrl", [
     // $scope.query = "";
     $scope.movies = [];
 
+    $('#modal1').openModal();
+    $('ul.tabs').tabs();
+
     // Invoke the promise that reads from Firebase
     MovieStorage().then(
       // Handle resolve() from the promise
