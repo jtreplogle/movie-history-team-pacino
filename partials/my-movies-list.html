@@ -6,12 +6,11 @@
 
     <div ng-repeat="movie in movies">
       <a href="#/movies/{{ movie.id }}">{{ movie.name }}</a>
+      <div id="movieBox">
+        <!-- <img ng-src={{movie.posterUrl}}> -->
+      </div>
     </div>
 
-<!--     <div style="margin-top: 40px;">
-      <a href="#/songs/new">Create New Song</a>
-    </div>
- -->
   </section>
 
 </article>

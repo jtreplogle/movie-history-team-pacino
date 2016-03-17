@@ -10,7 +10,6 @@ MovieApp.controller("MyMoviesCtrl", [
     // $scope.songSearchText = {name: "", artist: "", album: ""};
     // $scope.query = "";
     $scope.movies = [];
-    $scope.test = "Testing";
 
     // Invoke the promise that reads from Firebase
     MovieStorage().then(
@@ -18,6 +17,7 @@ MovieApp.controller("MyMoviesCtrl", [
       movieCollection => Object.keys(movieCollection).forEach(key => {
         movieCollection[key].id = key;
         $scope.movies.push(movieCollection[key]);
+        console.log(movieCollection[key]);
       }),
       // Handle reject() from the promise
       err => console.log(err)

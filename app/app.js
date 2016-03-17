@@ -5,7 +5,7 @@
 // same thing applies to the $routeProvider word. these enable routing for views, not in vanilla angular
 let MovieApp = angular.module("MovieApp", ['ngRoute', 'firebase'])
   // define my personal firebase URL as a constant to be referenced later as firebaseURL
-  .constant('firebaseURL', "https://pizzapaperairplane.firebaseio.com/movies/.json");
+  .constant('firebaseURL', "https://pizzapaperairplane.firebaseio.com/");
 
 /*
   Define a promise for any view that needs an authenticated user

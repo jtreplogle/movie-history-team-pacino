@@ -1,5 +1,16 @@
-/* line 3, stdin */body{display:flex;min-height:100vh;flex-direction:column}/* line 9, stdin */main{flex:1 0 auto}
+body{display:flex;min-height:100vh;flex-direction:column}
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGVzLmNzcyIsInNvdXJjZXMiOlsic3R5bGVzLnNjc3MiXSwibWFwcGluZ3MiOiJtQkFFQSxJQUFJLEFBQUMsQ0FDSixPQUFPLENBQUUsSUFBSyxDQUNkLFVBQVUsQ0FBRSxLQUFNLENBQ2xCLGNBQWMsQ0FBRSxNQUFPLENBQ3ZCLG1CQUVELElBQUksQUFBQyxDQUNKLElBQUksQ0FBRSxRQUFTLENBQ2YiLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIuIn0= */
+main{flex:1 0 auto}
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGVzLmNzcyIsInNvdXJjZXMiOlsic3R5bGVzLnNjc3MiXSwibWFwcGluZ3MiOiJtQkFFQSxJQUFJLEFBQUMsQ0FDSixPQUFPLENBQUUsSUFBSyxDQUNkLFVBQVUsQ0FBRSxLQUFNLENBQ2xCLGNBQWMsQ0FBRSxNQUFPLENBQ3ZCLG1CQUVELElBQUksQUFBQyxDQUNKLElBQUksQ0FBRSxRQUFTLENBQ2YiLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIvc291cmNlLyIsInNvdXJjZXNDb250ZW50IjpbIi8vIE1hdGVyaWFsaXplIFN0aWNreSBGb290ZXIgQ29kZVxyXG5cclxuYm9keSB7XHJcblx0ZGlzcGxheTogZmxleDtcclxuXHRtaW4taGVpZ2h0OiAxMDB2aDtcclxuXHRmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG59XHJcblxyXG5tYWluIHtcclxuXHRmbGV4OiAxIDAgYXV0bztcclxufVxyXG4iXX0= */
+.movieBox {
+  width: 200px;
+  height: 286px;
+  border: 2px solid #666;
+  float: left;
+  margin: 20px;
+}
+
+#showPostersHere img {
+  width: 100%;
+  height: 100%;
+}
