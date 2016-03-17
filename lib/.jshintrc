@@ -1,0 +1,14 @@
+{
+  "predef": [ "document", "console", "angular", "require", "jQuery", "$", "setTimeout" ],
+  "esversion": 6,
+  "globalstrict": true,
+  "curly": true,
+  "eqeqeq": true,
+  "undef": true,
+  "unused": true,
+  "globals": {
+    "SomeGlobalVariableYouWantToUse": true,
+    "Firebase": true
+
+  }
+}

@@ -8,11 +8,8 @@ MovieApp.controller("SearchCtrl",
   "$compile",
   "$q",
   "firebaseURL",
-
-
   function ($scope, $location, $http, $compile, $q, firebaseURL) {
 
-    $scope.search = "";
     $scope.omdbResultArr = [];
 
     $scope.searchMovie = function() {
@@ -87,7 +84,6 @@ MovieApp.controller("SearchCtrl",
       }  // end for
       $("#showPostersHere").html($compile(posterStr)($scope));  // use $compile to bind dynamically generated content
     } // end function displayPosters()
-
 
     $scope.addToWatched = function(idx) {
       var rating = 5; // hard-coded rating, for testing

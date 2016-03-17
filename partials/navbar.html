@@ -1,15 +1,10 @@
-<nav>
-
-  <div class="nav-wrapper">
-    <a href="#/guide" class="center brand-logo">PACINO</a> 
+<div class="row"  ng-controller="SearchCtrl">
+  <div class="col l11">
+    <input ng-model="search" placeholder="Search Movie Database:" type="text"  ng-if="isAuthenticated()" ng-keyup="$event.which === 13 && searchMovie()" >
+  </div>
+  <div>
     <ul class="center">
-      <li><a href="#/search">Find New Movies</a></li>
-      <li><a href="#/list">Your Movies</a></li>
-    </ul>
-    <ul class="right">
       <li><a href="#/" ng-if="isAuthenticated()" ng-click="logout()">Logout</a></li>
-      <li><a href="#/login" ng-if="!isAuthenticated()">Login</a></li>
     </ul>
   </div>
-
-</nav>
+</div>
