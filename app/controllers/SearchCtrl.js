@@ -16,7 +16,7 @@ MovieApp.controller("SearchCtrl",
 
     $scope.searchMovie = function() {
       console.log("search", $scope.search);
-      $http.get("http://www.omdbapi.com/?s=" + $scope.search)
+      $http.get("http://www.omdbapi.com/?t=" + $scope.search)
       .then(function(response){ 
         $scope.omdbResultArr = response.data;
         console.log("data", response.data);
