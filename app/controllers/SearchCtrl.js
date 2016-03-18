@@ -14,12 +14,13 @@ MovieApp.controller("SearchCtrl",
       $("#showPostersHere").html("");  // clear poster display area
       $q.all([
         $http.get("http://www.omdbapi.com/?s=" + $scope.search + "&page=1"),
-        $http.get(`${firebaseURL}/movies/.json`)
+        //$http.get(`${firebaseURL}/movies/.json`)
         ])
       .then((results) => {
         // results is [Object, Object]
         // where Objects are results of first get and second get
-        $scope.omnibusArr = $scope.processOMDB(results[0]).concat($scope.processFirebase(results[1]));
+        //$scope.omnibusArr = $scope.processOMDB(results[0]).concat($scope.processFirebase(results[1]));
+        $scope.omnibusArr = $scope.processOMDB(results[0]);
         $scope.displayPosters();
       });  // end then
     }  // end function searchMovie
