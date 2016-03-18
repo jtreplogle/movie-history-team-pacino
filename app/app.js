@@ -33,6 +33,18 @@ MovieApp.config(["$routeProvider",
         controller: "MyMoviesCtrl",
         resolve: { isAuth }
       }).
+      when("/tracked", {
+        templateUrl: "partials/my-movies-list.html",
+        controller: "trackedCtrl"
+      }).
+      when("/untracked", {
+        templateUrl: "partials/my-movies-list.html",
+        controller: "untrackedCtrl"
+      }).
+      when("/watched", {
+        templateUrl: "partials/my-movies-list.html",
+        controller: "watchedCtrl"
+      }).
       when("/login", {
         templateUrl: "partials/login.html",
         controller: "LoginCtrl"
